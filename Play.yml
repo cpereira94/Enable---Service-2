@@ -1,0 +1,8 @@
+---
+- hosts: 10.10.200.83
+  connection: local
+  gather_facts: no
+  name: reload service httpd, in all cases
+    systemd:
+      name: httpd
+      state: reloaded
